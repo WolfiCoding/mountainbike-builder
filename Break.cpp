@@ -1,12 +1,11 @@
 
-#include "Frame.h"
+#include "Break.h"
 
-Frame::Frame(std::string name, double weight, double cost) : Part(name, weight, cost) {}
+Break::Break(std::string n, double w, double c) : Part(n, w, c) {}
 
-void Frame::display() const {
-    std::cout << "Part Type: Frame"
+void Break::display() const {
+    std::cout << "Part Type: Break"
                   << "\nName: " << this->getName() 
                   << "\nWeight: " << this->getWeight() 
                   << "kg\nCost: " << this->getCost() << " EUR\n\n";
-
 }

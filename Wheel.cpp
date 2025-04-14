@@ -1,12 +1,10 @@
+#include "Wheel.h"
 
-#include "Frame.h"
+Wheel::Wheel(std::string n, double w, double c) : Part(n, w, c) {}
 
-Frame::Frame(std::string name, double weight, double cost) : Part(name, weight, cost) {}
-
-void Frame::display() const {
-    std::cout << "Part Type: Frame"
+void Wheel::display() const {
+    std::cout << "Part Type: Wheel"
                   << "\nName: " << this->getName() 
                   << "\nWeight: " << this->getWeight() 
                   << "kg\nCost: " << this->getCost() << " EUR\n\n";
-
 }
