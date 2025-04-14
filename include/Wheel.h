@@ -10,13 +10,10 @@ class Wheel : public Part {
         std::string material;
 
     public:
-        Wheel(std::string brand, std::string model, double weight, double cost, double diameter);
-        double getDiameter(){
-            return diameter;
-        }
-        double getWith(){
-            return width;
-        }
+        Wheel(std::string brand, std::string model, double weight, double cost, double diameter, double width, std::string material);
+        double getDiameter() const;
+        double getWidth() const;
+        std::string getMaterial() const;
         void display() const override;
 
 
