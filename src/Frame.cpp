@@ -1,11 +1,13 @@
 
 #include "Frame.h"
 
-Frame::Frame(std::string name, double weight, double cost) : Part(name, weight, cost) {}
+Frame::Frame(std::string n, std::string m, double w, double c)
+        : Part(n, m, w, c) {}
 
 void Frame::display() const {
     std::cout << "Part Type: Frame"
-                  << "\nName: " << this->getName() 
+                  << "\nName: " << this->getBrand()
+                  << "\nModel: " << this->getModel()
                   << "\nWeight: " << this->getWeight() 
                   << "kg\nCost: " << this->getCost() << " EUR\n\n";
 

@@ -4,10 +4,7 @@
 #include "Wheel.h"
 
 int main(){
-    Frame frame("Specialized Enduro", 4.5, 4000);
-
-    Part* ptr = &frame;
-    ptr->display();
-
+    Break b("Magura", "MT 7 Pro", 0.8, 300);
+    b.display();
     return 0;
 }

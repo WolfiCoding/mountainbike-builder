@@ -6,15 +6,17 @@
 
 class Part{
     private:
-        std::string name;
+        std::string brand;
+        std::string model;
         double weight;
         double cost;
 
     public:
-        Part(std::string n, double w, double c);
+        Part(std::string b, std::string m, double w, double c);
         virtual ~Part();
         
-        std::string getName() const;
+        std::string getBrand() const;
+        std::string getModel() const;
         double getWeight() const;
         double getCost() const;
 

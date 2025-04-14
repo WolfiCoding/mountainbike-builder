@@ -1,10 +1,13 @@
 #include "Wheel.h"
 
-Wheel::Wheel(std::string n, double w, double c) : Part(n, w, c) {}
+Wheel::Wheel(std::string b, std::string m, double w, double c, double d) 
+        : Part(b, m, w, c), diameter(d) {}
 
 void Wheel::display() const {
     std::cout << "Part Type: Wheel"
-                  << "\nName: " << this->getName() 
-                  << "\nWeight: " << this->getWeight() 
+                  << "\nBrand: " << this->getBrand()
+                  << "\nModel: " << this->getModel()
+                  << "\nWeight: " << this->getWeight()
+                  << "\nDiameter: " << this->diameter
                   << "kg\nCost: " << this->getCost() << " EUR\n\n";
 }

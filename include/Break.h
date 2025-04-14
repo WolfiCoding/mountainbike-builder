@@ -6,7 +6,7 @@
 class Break : public Part {
 
     public:
-        Break(std::string name, double weight, double cost);
+        Break(std::string name, std::string model, double weight, double cost);
 
         void display() const override;
 
