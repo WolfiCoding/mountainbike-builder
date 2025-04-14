@@ -7,14 +7,14 @@
         "command": "powershell",
         "args": [
           "-Command",
-          "if (Test-Path mountainbikeApp.exe) { Remove-Item mountainbikeApp.exe -Force }; g++ -g *.cpp -o mountainbikeApp.exe; if ($?) { ./mountainbikeApp.exe }"
+          "if (Test-Path mountainbikeApp.exe) { Remove-Item mountainbikeApp.exe -Force }; g++ -g ./src/*.cpp -Iinclude -o mountainbikeApp.exe; if ($?) { ./mountainbikeApp.exe }"
         ],
         "group": {
           "kind": "build",
           "isDefault": true
         },
         "problemMatcher": ["$gcc"],
-        "detail": "PowerShell-safe: builds all .cpp files and runs the app"
+        "detail": "PowerShell-safe: builds all .cpp files from /src using headers from /include and runs the app"
       }
     ]
   }
