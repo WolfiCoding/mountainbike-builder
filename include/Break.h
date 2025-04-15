@@ -1,5 +1,4 @@
-#ifndef Break_H
-#define Break_H
+#pragma once
 
 #include "Part.h"
 
@@ -12,5 +11,3 @@ class Break : public Part {
 
 
 };
-
-#endif

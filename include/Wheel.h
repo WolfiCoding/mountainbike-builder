@@ -1,5 +1,4 @@
-#ifndef Wheel_H
-#define Wheel_H
+#pragma once
 
 #include "Part.h"
 
@@ -18,5 +17,3 @@ class Wheel : public Part {
 
 
 };
-
-#endif

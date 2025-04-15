@@ -8,4 +8,8 @@ std::string Part::getModel() const   { return this->model; }
 double Part::getWeight() const    { return this->weight; }
 double Part::getCost() const        { return this->cost; }
 
+void Part::baseDisplay() const{
+    std::cout << "Part: " << this->brand << " " << this->model << "\n";
+}
+
 Part::~Part() {}

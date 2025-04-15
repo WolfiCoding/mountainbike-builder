@@ -1,5 +1,4 @@
-#ifndef Part_h
-#define Part_h
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -19,8 +18,7 @@ class Part{
         std::string getModel() const;
         double getWeight() const;
         double getCost() const;
+        void baseDisplay() const;
 
         virtual void display() const = 0;
 };
-
-#endif

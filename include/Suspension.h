@@ -1,20 +1,20 @@
-#ifndef Suspension_H
-#define Suspension_H
+#pragma once
 
 #include "Part.h"
 
 class Suspension : public Part{
 
     private:
-        int travel;
-        int diameter;
+        int travel; //in mm
+        
+
 
     public:
-        Suspension(std::string brand, std::string model, double weight, double cost, int travel, int diameter);
+        Suspension(std::string brand, std::string model, double weight, double cost, int travel);
+        
         int getTravel() const;
-        int getDiameter() const;
-        virtual void display() const = 0;
+        
+        virtual void adjustSag(double riderWeight) const = 0;
+        //virtual void display() const = 0; not implemented -> this class is abstract
 
 };
-
-#endif

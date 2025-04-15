@@ -1,10 +1,16 @@
+#include "Chain.h"
+#include "Gears.h"
 
-#include "Frame.h"
-#include "Break.h"
-#include "Wheel.h"
+#include "Drivetrain.h"
 
-int main(){
-    Break b("Magura", "MT 7 Pro", 0.8, 300);
-    b.display();
+int main() {
+    Gears myGears("Shimano", "XT", 0.45, 180, 10, 51, 100, "carbon");
+    Chain myChain("SRAM", "GX", 0.25, 60, 50, 12);
+
+    Drivetrain myDrivetrain(myGears, myChain);
+
+    myDrivetrain.display();  // Show a combined view of the drivetrain
+    myDrivetrain.baseDisplay();
+
     return 0;
 }
